@@ -24,6 +24,11 @@ class swatch::package (
   $package,
   $ensure
 ) {
+  
+    if ($::osfamily == 'RedHat' and versioncmp($::operatingsystemrelease, '6.0.0') >= 0) {
+      include puppet_common::packages::perl_time_hires  
+    }
+    
     package { $package:
       ensure => $ensure
     }
