@@ -57,10 +57,11 @@ if [ -f $PID ]
     echo "swatch is running"                                                       
     PARENT="$(< "$PID")"                                                           
     INIT_PID=`ps -o ppid $PARENT |awk ' /[0-9]+/ { print $1 } '`                   
-    ps -o pid -o command --pid $INIT_PID --pid $PARENT --ppid $PARENT              
+    ps -o pid -o command --pid $INIT_PID --pid $PARENT --ppid $PARENT
+    RETVAL=$?
   else                                                                             
-    echo "swatch is not running"                                                   
-  RETVAL=$?                                                                        
+    echo "swatch is not running"
+    RETVAL=1                                                                                                                           
 fi                                                                                 
 }                                                                                  
                                                                                    
