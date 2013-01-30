@@ -1,0 +1,10 @@
+GIT
+  remote: git@github.com:intelie/puppet_common.git
+  ref: master
+  sha: 99a41cef32a93ddb540529b5bff8dd5a6e660628
+  specs:
+    puppet_common (0.0.1)
+
+DEPENDENCIES
+  puppet_common (>= 0)
+
