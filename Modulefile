@@ -1,4 +1,4 @@
-name    'swatch'
+name    'intelie-swatch'
 version '0.0.1'
 source 'http://sourceforge.net/projects/swatch'
 author 'cvega@mediatemple.net'
